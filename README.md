@@ -1,5 +1,5 @@
 # L-gica-de-Programa-o
-códigos da aula de LP
+códigos da aula de LP (Busca Sequêncial)
 
 
 package java55;
