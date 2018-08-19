@@ -1,0 +1,43 @@
+package Projetos;
+
+import java.util.Scanner;
+
+public class OrdenarVetor {
+
+    public static void main(String[] args) {
+        
+        Scanner tcl = new Scanner(System.in);
+        
+        System.out.print("Digite a quantidade de posicoes que o vetor ira ter: ");
+        
+        int a = tcl.nextInt();
+        
+        int vet[] = new int[a];
+        
+        System.out.println("");
+        System.out.println("Digite as posicoes do vetor");
+            
+        for (int b = 0; b < vet.length; b++) {
+            vet[b] = tcl.nextInt();                     //recebendo do usuario
+        }
+        System.out.println("");
+        System.out.println("---------VETOR ORDENADO---------");
+        System.out.println("");
+
+        int aux, c;
+
+        for (int b = 1; b < vet.length; b++) {     
+	//começa do 1 já que o vet[0] não precisa de ordenação
+            aux = vet[b];                         
+	//variável auxiliar armazena o valor da posição
+            c = b - 1;                             
+	//uma segunda variável que sera usada para posições
+            while (c >= 0 && vet[c] > aux) {       
+	//repetição com condições da posição e teste de valores para o sort
+                vet[c + 1] = vet[c];               
+	//trocam-se os valores
+                c--;
+            }
+            vet[c + 1] = aux;                      
+	//o numero e trocado de posição
+        }
