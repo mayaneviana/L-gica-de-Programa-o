@@ -1,0 +1,6 @@
+ private void botaoActionPerformed(java.awt.event.ActionEvent evt) {                                      
+       if(usuario.getText().equals("Admin")&&senha.getText().equals("1234")){
+           JOptionPane.showMessageDialog(null, "Bem vinda(o) ao sistema!");
+       } else{
+           JOptionPane.showMessageDialog(null, "Coloque novamente seus dados");
+    }        
