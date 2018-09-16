@@ -1,0 +1,25 @@
+package numeroprimo;
+import java.util.Scanner;
+public class NumeroPrimo {
+    public static void main(String[] args) {
+        
+       NumeroPrimo objeto = new NumeroPrimo();
+       Scanner mvc = new Scanner(System.in);
+       
+        System.out.println("Digite um valor");
+        int x = mvc.nextInt();
+        int fim = objeto.algoritmo(x);
+    }
+    public int algoritmo(int x){
+        for(int i = 1; i < x; i++){
+            if(x%i == 0){
+                System.out.println("o valor: " + x + " é primo");
+                break;
+            } else{
+                System.out.println("o valor: " + x + "  não é primo");
+            }
+        }
+        return 0;
+    }
+    
+}
